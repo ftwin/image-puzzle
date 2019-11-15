@@ -39,40 +39,30 @@ button {
     border: 0;
 }
 
+button:focus::before {
+    content:'';
+    display:block;
+    box-shadow:inset 0 0 10px white;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+button:hover::before {
+    content:'';
+    display:block;
+    box-shadow:inset 0 0 10px white;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
 img {
     vertical-align: bottom;
     width: 200px;
 }
 
-/* #one::after {
-    content: "1";
-    position: absolute;
-    z-index: 100;
-    bottom: 0;
-    left: 10px;
-    font-size:200px;
-}
-
-#two::after {
-    content: "2";
-    position: absolute;
-    bottom: 0;
-    left: 10px;
-    font-size:200px;
-}
-
-#three::after {
-    content: "3";
-    position: absolute;
-    bottom: 0;
-    left: 10px;
-    font-size:200px;
-}
-
-#four::after {
-    content: "4";
-    position: absolute;
-    bottom: 0;
-    left: 10px;
-    font-size:200px;
-} */
