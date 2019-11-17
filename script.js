@@ -1,4 +1,8 @@
 //picture puzzle
+$('a.instructions').on('click', function() {
+    $('nav a').css('color', '#9c6b00').animate(1000);
+    $('header h2').animate({'height': 'toggle'});
+});
 
 const puzzle = {};
 
@@ -58,14 +62,20 @@ puzzle.status = function() {
              puzzle.score++;
         }
     })
-    //if score equals array length, tell player they've won, if not, clear the score for the next turn
+    //if score equals array length, tell player they've won and  disable controls,
+    // if not, clear the score for the next turn
     
     if (puzzle.score === puzzle.randomArray.length) {
         $('h2.win').html("You've Won!!!");
+        $('div.win').fadeIn(500);
+        $('.puzzleContainer button').on('click', function () {
+            null;
+        })
+        puzzle.score = 0;
     } else (puzzle.score = 0);
 }
 
-//6. If user clicks on img store index#(class#) to let 'active' add class of active
+// If user clicks on img store index#(class#) to let 'active' add class of active
 
 
 puzzle.active = "";
@@ -104,6 +114,24 @@ puzzle.selectPiece = function() {
     } )
 }
 
+//reset button
+
+puzzle.reset = function() {
+    puzzle.randomizer(puzzle.randomArray);
+    puzzle.placeImages(puzzle.randomArray);
+    puzzle.score = 0;
+    if ($('div.win').css('display') === 'block') {
+        $('div.win').fadeOut(500);
+    }
+}
+
+$('button.reset').on('click', function(e){
+    e.preventDefault();
+    puzzle.reset();
+})
+
+// initialize everything
+
 puzzle.init = function () {
     puzzle.randomArray = puzzle.pieces.slice(0);
     puzzle.randomizer(puzzle.randomArray);
@@ -118,7 +146,7 @@ $(function () {
 
 //accessibility-------
 // tab through the game pieces
-// space key to select them
+
 
 //stretch goals-------------------------
 // add a timer
