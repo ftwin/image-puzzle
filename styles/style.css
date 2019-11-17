@@ -239,6 +239,11 @@ a {
   color: #9c6b00;
 }
 
+a.instructions:hover,
+a.instructions:focus {
+  color: #694800;
+}
+
 .instructionsTopLink a {
   font-size: 100px;
   line-height: 1;
@@ -248,6 +253,12 @@ a {
   z-index: 1;
   padding: 0  5px 0 20px;
   text-shadow: 1px 1px 1px #503700;
+}
+
+.instructionsTopLink a:hover,
+.instructionsTopLink a:focus {
+  text-shadow: none;
+  right: -2px;
 }
 
 a.start {
@@ -346,6 +357,12 @@ h2.win {
   border-radius: 50px;
 }
 
+@media (min-width: 500px) {
+  h2.win {
+    margin-top: 40%;
+  }
+}
+
 img {
   vertical-align: bottom;
   width: 100%;
@@ -380,4 +397,9 @@ footer p {
   font-size: 1.6rem;
   margin: 0;
   text-align: center;
+}
+
+footer a:hover,
+footer a:focus {
+  border-bottom: 3px solid #9c6b00;
 }
