@@ -265,6 +265,11 @@ a.start {
   padding-top: 10px;
 }
 
+a.start:hover,
+a.start:focus {
+  color: #694800;
+}
+
 a.start::after {
   content: "";
   position: absolute;

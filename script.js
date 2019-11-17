@@ -15,21 +15,6 @@ const puzzle = {};
 //this is the answer key
 
 puzzle.pieces = [
-    // {url: "<img src='assets/plantImage01.jpg' alt='1' title='1'>",
-    // answer: 1,
-    // currentPosition: ""}
-    // ,
-    // { url: "<img src='assets/plantImage02.jpg' alt='2' title='2'>",
-    // answer: 2,
-    // currentPosition: ""}
-    // ,
-    // {url: "<img src='assets/plantImage03.jpg' alt='3' title='3'>",
-    // answer: 3,
-    // currentPosition: ""}
-    // ,
-    // {url: "<img src='assets/plantImage04.jpg' alt='4' title='4'>",
-    // answer: 4,
-    // currentPosition: ""}
 
     {
         url: "<img src='assets/plantImageSmall01.jpg' alt='1' title='1'>",
@@ -62,7 +47,7 @@ puzzle.pieces = [
     }
     ,
     {
-        url: "<img src='assets/plantImagesmall06.jpg' alt='6' title='6'>",
+        url: "<img src='assets/plantImageSmall06.jpg' alt='6' title='6'>",
         answer: 6,
         currentPosition: ""
     }
@@ -252,9 +237,8 @@ $(function () {
 //stretch goals-------------------------
 // add a timer
 //imgs don't start in correct spot
-// reset button
 // multiple images
-//larger grid
+
 
 
 
