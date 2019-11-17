@@ -3,6 +3,7 @@
 NotForGit
 sass
 .vscode
+.gitignore
 
 # Compiled source #
 ###################
