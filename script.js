@@ -1,7 +1,12 @@
-//picture puzzle
+//display or hide instructions
 $('a.instructions').on('click', function() {
     $('nav a').css('color', '#9c6b00').animate(1000);
     $('header h2').animate({'height': 'toggle'});
+
+    $('html, body').animate({
+        scrollTop: $('#heading').offset().top
+    }, 500)
+
 });
 
 const puzzle = {};
