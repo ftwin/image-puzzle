@@ -15,21 +15,117 @@ const puzzle = {};
 //this is the answer key
 
 puzzle.pieces = [
-    {url: "<img src='assets/plantImage01.jpg' alt='1' title='1'>",
-    answer: 1,
-    currentPosition: ""}
+    // {url: "<img src='assets/plantImage01.jpg' alt='1' title='1'>",
+    // answer: 1,
+    // currentPosition: ""}
+    // ,
+    // { url: "<img src='assets/plantImage02.jpg' alt='2' title='2'>",
+    // answer: 2,
+    // currentPosition: ""}
+    // ,
+    // {url: "<img src='assets/plantImage03.jpg' alt='3' title='3'>",
+    // answer: 3,
+    // currentPosition: ""}
+    // ,
+    // {url: "<img src='assets/plantImage04.jpg' alt='4' title='4'>",
+    // answer: 4,
+    // currentPosition: ""}
+
+    {
+        url: "<img src='assets/plantImageSmall01.jpg' alt='1' title='1'>",
+        answer: 1,
+        currentPosition: ""
+    }
     ,
-    { url: "<img src='assets/plantImage02.jpg' alt='2' title='2'>",
-    answer: 2,
-    currentPosition: ""}
+    {
+        url: "<img src='assets/plantImageSmall02.jpg' alt='2' title='2'>",
+        answer: 2,
+        currentPosition: ""
+    }
     ,
-    {url: "<img src='assets/plantImage03.jpg' alt='3' title='3'>",
-    answer: 3,
-    currentPosition: ""}
+    {
+        url: "<img src='assets/plantImageSmall03.jpg' alt='3' title='3'>",
+        answer: 3,
+        currentPosition: ""
+    }
     ,
-    {url: "<img src='assets/plantImage04.jpg' alt='4' title='4'>",
-    answer: 4,
-    currentPosition: ""}
+    {
+        url: "<img src='assets/plantImageSmall04.jpg' alt='4' title='4'>",
+        answer: 4,
+        currentPosition: ""
+    }
+    ,
+    {
+        url: "<img src='assets/plantImageSmall05.jpg' alt='5' title='5'>",
+        answer: 5,
+        currentPosition: ""
+    }
+    ,
+    {
+        url: "<img src='assets/plantImagesmall06.jpg' alt='6' title='6'>",
+        answer: 6,
+        currentPosition: ""
+    }
+    ,
+    {
+        url: "<img src='assets/plantImageSmall07.jpg' alt='7' title='7'>",
+        answer: 7,
+        currentPosition: ""
+    }
+    ,
+    {
+        url: "<img src='assets/plantImageSmall08.jpg' alt='8' title='8'>",
+        answer: 8,
+        currentPosition: ""
+    }
+    ,
+    {
+        url: "<img src='assets/plantImageSmall09.jpg' alt='9' title='9'>",
+        answer: 9,
+        currentPosition: ""
+    }
+    ,
+    {
+        url: "<img src='assets/plantImageSmall10.jpg' alt='10' title='10'>",
+        answer: 10,
+        currentPosition: ""
+    }
+    ,
+    {
+        url: "<img src='assets/plantImageSmall11.jpg' alt='11' title='11'>",
+        answer: 11,
+        currentPosition: ""
+    }
+    ,
+    {
+        url: "<img src='assets/plantImageSmall12.jpg' alt='12' title='12'>",
+        answer: 12,
+        currentPosition: ""
+    }
+    ,
+    {
+        url: "<img src='assets/plantImageSmall13.jpg' alt='13' title='13'>",
+        answer: 13,
+        currentPosition: ""
+    }
+    ,
+    {
+        url: "<img src='assets/plantImageSmall14.jpg' alt='14' title='14'>",
+        answer: 14,
+        currentPosition: ""
+    }
+    ,
+    {
+        url: "<img src='assets/plantImageSmall15.jpg' alt='15' title='15'>",
+        answer: 15,
+        currentPosition: ""
+    }
+    ,
+    {
+        url: "<img src='assets/plantImageSmall16.jpg' alt='16' title='16'>",
+        answer: 16,
+        currentPosition: ""
+    }
 ];
 
 //function to randomize the array order
