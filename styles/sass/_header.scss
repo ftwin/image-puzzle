@@ -1,0 +1,97 @@
+body,
+a {
+    font-family: $mainFont;
+    font-size: 2.4rem;
+    line-height: 1.6;
+    color: $fontColour;
+}
+
+h1, 
+h2 {
+    line-height: 1.2;
+    text-align: center;
+    margin: 0;
+}
+h1 {
+    font-family: $secondaryFont;
+    font-size: 5.5rem;
+    font-weight: bold;
+    margin: 45px 0 20px;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+}
+
+header{
+    padding-bottom: 110px;
+    // instructions hidden by default
+    h2 {
+        display: none;
+        font-family: $mainFont;
+        font-size: 2.6rem;
+        color: lighten($background, 10);
+        background: $accent;
+        box-shadow: 5px 5px 2px $fontColour;
+        text-shadow: 1px 1px 1px darken($accent, 15);
+        border-radius: 20px;
+        padding: 10px;
+    }
+}
+
+.instructions {
+    font-family: $secondaryFont;
+    color: $accent;
+}
+
+a.instructions:hover,
+a.instructions:focus {
+    color: darken($accent, 10);
+}
+
+.instructionsTopLink a {
+    font-size: 100px;
+    line-height: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    padding: 0  5px 0 20px;
+    text-shadow: 1px 1px 1px darken($accent, 15);
+}
+
+.instructionsTopLink a:hover,
+.instructionsTopLink a:focus {
+    text-shadow: none;
+    right: -2px;
+}
+
+//get started button
+
+a.start {
+    padding-top: 10px;
+}
+
+a.start:hover,
+a.start:focus {
+    color: darken($accent, 10);
+}
+
+a.start::after {
+content: "";
+position: absolute;
+bottom: -85px;
+left: 30%;
+width: 0;
+border-left: 40px solid transparent;
+border-right: 40px solid transparent;
+border-top: 80px solid $accent;
+}

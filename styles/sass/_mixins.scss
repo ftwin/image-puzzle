@@ -1,0 +1,11 @@
+$fontColour: #0f0f0f;
+$background: rgb(223, 219, 203);
+$accent: #9c6b00;
+$mainFont: 'Caveat', cursive;
+$secondaryFont: 'Amatic SC', cursive;
+
+@mixin smallTablet{
+   @media (min-width: 500px){
+       @content;
+   }
+}

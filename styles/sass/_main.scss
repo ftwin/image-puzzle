@@ -1,0 +1,145 @@
+
+body { 
+    background: $background;
+}
+
+main {
+    margin: 50px 0;
+}
+
+.container {
+    width: 95%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+// game board
+
+img {
+    vertical-align: bottom;
+    width: 100%;
+}
+
+.gameBoard {
+    position: relative;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25% 25% 25% 25%;
+    line-height: 0;
+        
+    button {
+        position: relative;
+        padding: 0;
+        border: 0;
+        max-width: 100%;
+    }
+
+    button:focus::before,
+    button:hover::before{
+        content:'';
+        display:block;
+        box-shadow:inset 0 0 10px white;
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+    }
+}
+
+//selected game piece
+
+.active {
+    box-shadow: inset 10px 10px 10px 0px black;
+}
+
+.active::before {
+    content:'';
+    display:block;
+    box-shadow:inset 0 0 10px black;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+// winning message
+
+div.win {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+
+div.win:hover {
+    background: rgba(0, 0, 0, 0);
+}
+
+h2.win {
+    color: #ffffff;
+    font-size: 4rem;
+    line-height: 1.2;
+    padding: 20px 40px;
+    margin: 0 auto;
+    margin-top: 18%;
+    border-radius: 50px;
+
+    @include smallTablet {
+            margin-top: 40%;
+        }
+}
+
+//reset button
+
+button.reset {
+    display: block;
+    font-family: $secondaryFont;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    background: lighten($background, 10);
+    border:3px solid $accent;
+    border-top: transparent;
+    border-left: transparent;
+}
+
+button.reset:hover,
+button.reset:focus {
+    border-right: transparent;
+    border-bottom: transparent;
+    border: 0.5px dashed grey;
+}
+
+// photo credit
+
+.credit {
+    font-size: 1.8rem;
+    text-align: center;
+
+    a:hover {
+        color: $accent;
+    }
+}
+
+//footer
+
+footer {
+    background: darken($background, 20);
+    padding: 10px 0;
+    a,
+    p {
+        font-size: 1.6rem;
+        margin: 0;
+        text-align: center;
+    }
+
+    a:hover,
+    a:focus {
+        border-bottom: 3px solid $accent;
+    }
+}
