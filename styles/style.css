@@ -221,7 +221,7 @@ header h2 {
   display: none;
   font-family: "Caveat", cursive;
   font-size: 2.6rem;
-  color: #f2f1eb;
+  color: white;
   background: #9c6b00;
   -webkit-box-shadow: 5px 5px 2px #0f0f0f;
           box-shadow: 5px 5px 2px #0f0f0f;
@@ -288,7 +288,7 @@ a.start::after {
 }
 
 body {
-  background: #dfdbcb;
+  background: #eeeeee;
 }
 
 .wrapper {
@@ -396,7 +396,7 @@ button.reset {
   padding: 10px 20px;
   border-radius: 10px;
   margin: 20px auto;
-  background: #f2f1eb;
+  background: white;
   border: 3px solid #9c6b00;
   border-top: transparent;
   border-left: transparent;
@@ -419,7 +419,7 @@ button.reset:focus {
 }
 
 footer .wrapper {
-  background: #b8af8c;
+  background: #bbbbbb;
   padding: 10px 0;
 }
 
