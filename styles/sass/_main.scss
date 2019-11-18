@@ -3,6 +3,13 @@ body {
     background: $background;
 }
 
+.wrapper {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative;
+}
+
 main {
     margin: 50px 0;
 }
@@ -128,7 +135,7 @@ button.reset:focus {
 
 //footer
 
-footer {
+footer .wrapper{
     background: darken($background, 20);
     padding: 10px 0;
     a,

@@ -201,7 +201,7 @@ h1 {
   margin: 45px 0 20px;
 }
 
-.wrapper {
+.container {
   width: 90%;
   margin: 0 auto;
   text-align: center;
@@ -240,6 +240,10 @@ a.instructions:focus {
   color: #694800;
 }
 
+.instructionsTopLink {
+  position: relative;
+}
+
 .instructionsTopLink a {
   font-size: 100px;
   line-height: 1;
@@ -249,6 +253,12 @@ a.instructions:focus {
   z-index: 1;
   padding: 0  5px 0 20px;
   text-shadow: 1px 1px 1px #503700;
+}
+
+@media (min-width: 1600px) {
+  .instructionsTopLink a {
+    position: absolute;
+  }
 }
 
 .instructionsTopLink a:hover,
@@ -279,6 +289,13 @@ a.start::after {
 
 body {
   background: #dfdbcb;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  position: relative;
 }
 
 main {
@@ -401,19 +418,19 @@ button.reset:focus {
   color: #9c6b00;
 }
 
-footer {
+footer .wrapper {
   background: #b8af8c;
   padding: 10px 0;
 }
 
-footer a,
-footer p {
+footer .wrapper a,
+footer .wrapper p {
   font-size: 1.6rem;
   margin: 0;
   text-align: center;
 }
 
-footer a:hover,
-footer a:focus {
+footer .wrapper a:hover,
+footer .wrapper a:focus {
   border-bottom: 3px solid #9c6b00;
 }

@@ -9,3 +9,9 @@ $secondaryFont: 'Amatic SC', cursive;
        @content;
    }
 }
+
+@mixin largeScreen{
+   @media (min-width: 1600px){
+       @content;
+   }
+}
