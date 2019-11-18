@@ -392,6 +392,15 @@ button.reset:focus {
   border: 0.5px dashed grey;
 }
 
+.credit {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.credit a:hover {
+  color: #9c6b00;
+}
+
 footer {
   background: #b8af8c;
   padding: 10px 0;
