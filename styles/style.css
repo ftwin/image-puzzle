@@ -308,6 +308,12 @@ main {
   margin: 0 auto;
 }
 
+@media (max-height: 799px) {
+  .container {
+    max-width: 95vh;
+  }
+}
+
 img {
   vertical-align: bottom;
   width: 100%;

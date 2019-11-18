@@ -15,3 +15,9 @@ $secondaryFont: 'Amatic SC', cursive;
        @content;
    }
 }
+
+@mixin heightLimited {
+    @media (max-height: 799px){
+        @content;
+    }
+}
