@@ -1,6 +1,6 @@
 //display or hide instructions
 $('a.instructions').on('click', function () {
-    $('nav a').css('color', '#9c6b00').animate(1000);
+    $('nav a').css('color', '#9c6b00').animate(500);
     $('header h2').animate({ 'height': 'toggle' });
 
     //smooth scroll
@@ -318,8 +318,6 @@ puzzle.tiles = [ // beginning of tiles puzzle images
 ]; // end of tiles puzzle images
 
 
-
-
 //function to randomize the array order
 //this creates a copy of the original array, but in random order
 //  Durstenfeld shuffle from https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
@@ -404,6 +402,7 @@ puzzle.selectPiece = function () {
 //reset button
 
 puzzle.reset = function () {
+    puzzle.designPicker();
     puzzle.randomizer(puzzle.randomArray);
     puzzle.placeImages(puzzle.randomArray);
     puzzle.score = 0;

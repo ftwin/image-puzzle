@@ -187,15 +187,6 @@ a {
   color: #0f0f0f;
 }
 
-header {
-  background: url("../assets/backgroundImage.jpg");
-  padding-bottom: 110px;
-}
-
-header h2 {
-  display: none;
-}
-
 h1,
 h2 {
   line-height: 1.2;
@@ -210,18 +201,6 @@ h1 {
   margin: 45px 0 20px;
 }
 
-header h2 {
-  font-family: "Caveat", cursive;
-  font-size: 2.6rem;
-  color: #f2f1eb;
-  background: #9c6b00;
-  -webkit-box-shadow: 5px 5px 2px #0f0f0f;
-          box-shadow: 5px 5px 2px #0f0f0f;
-  text-shadow: 1px 1px 1px #503700;
-  border-radius: 20px;
-  padding: 10px;
-}
-
 .wrapper {
   width: 90%;
   margin: 0 auto;
@@ -232,6 +211,23 @@ a {
   display: inline-block;
   text-decoration: none;
   position: relative;
+}
+
+header {
+  padding-bottom: 110px;
+}
+
+header h2 {
+  display: none;
+  font-family: "Caveat", cursive;
+  font-size: 2.6rem;
+  color: #f2f1eb;
+  background: #9c6b00;
+  -webkit-box-shadow: 5px 5px 2px #0f0f0f;
+          box-shadow: 5px 5px 2px #0f0f0f;
+  text-shadow: 1px 1px 1px #503700;
+  border-radius: 20px;
+  padding: 10px;
 }
 
 .instructions {
@@ -293,6 +289,11 @@ main {
   width: 95%;
   max-width: 800px;
   margin: 0 auto;
+}
+
+img {
+  vertical-align: bottom;
+  width: 100%;
 }
 
 .gameBoard {
@@ -366,11 +367,6 @@ h2.win {
   h2.win {
     margin-top: 40%;
   }
-}
-
-img {
-  vertical-align: bottom;
-  width: 100%;
 }
 
 button.reset {
