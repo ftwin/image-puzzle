@@ -1,15 +1,3 @@
-//display or hide instructions
-$('a.instructions').on('click', function () {
-    $('nav a').css('color', '#9c6b00').animate(500);
-    $('header h2').animate({ 'height': 'toggle' });
-
-    //smooth scroll
-    $('html, body').animate({
-        scrollTop: $('#heading').offset().top
-    }, 500)
-
-});
-
 // set up name space
 const puzzle = {};
 
@@ -334,6 +322,7 @@ puzzle.randomizer = function (array) {
 puzzle.placeImages = function (array) {
     for (let i = array.length - 1; i >= 0; i--) {
         $('.puzzleContainer.' + (i + 1) + ' button').html(array[i].url);
+        $('.puzzleContainer.' + (i + 1) + ' button').attr('aria-label', `puzzle slot ${parseInt([i])+1} of ${array.length}, puzzle piece ${array[i].answer}`);
         array[i].currentPosition = i + 1;
     }
 }

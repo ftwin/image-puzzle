@@ -34,16 +34,17 @@ a {
 header{
     padding-bottom: 110px;
     // instructions hidden by default
-    h2 {
-        display: none;
-        font-family: $mainFont;
+    h2,
+    a {
+        font-weight: 400;
+        color: $accent;
         font-size: 2.6rem;
-        color: lighten($background, 10);
-        background: $accent;
-        box-shadow: 5px 5px 2px $fontColour;
-        text-shadow: 1px 1px 1px darken($accent, 15);
-        border-radius: 20px;
-        padding: 10px;
+        padding: 20px;
+        font-weight: 400;
+    }
+
+    p {
+        margin: 0 10%;
     }
 }
 
@@ -55,31 +56,6 @@ header{
 a.instructions:hover,
 a.instructions:focus {
     color: darken($accent, 10);
-}
-
-.instructionsTopLink {
-    position: relative;
-}
-
-.instructionsTopLink a {
-    font-size: 100px;
-    line-height: 1;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    padding: 0  5px 0 20px;
-    text-shadow: 1px 1px 1px darken($accent, 15);
-
-    @include largeScreen {
-        position: absolute;
-    }
-}
-
-.instructionsTopLink a:hover,
-.instructionsTopLink a:focus {
-    text-shadow: none;
-    right: -2px;
 }
 
 //get started button
@@ -96,8 +72,8 @@ a.start:focus {
 a.start::after {
 content: "";
 position: absolute;
-bottom: -85px;
-left: 30%;
+bottom: -70px;
+left: 33%;
 width: 0;
 border-left: 40px solid transparent;
 border-right: 40px solid transparent;
