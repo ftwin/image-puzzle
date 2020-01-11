@@ -55,13 +55,12 @@ img {
     button:hover::before{
         content:'';
         display:block;
-        // box-shadow:inset 0 0 10px white;
         position:absolute;
         border: 4px dashed red;
-        top:0;
-        left:0;
-        width:95%;
-        height:95%;
+        top:calc(7.5% - 4px);
+        left:calc(7.5% - 4px);
+        width:85%;
+        height:85%;
     }
 }
 
@@ -77,10 +76,10 @@ img {
     box-shadow:inset 0 0 10px black;
     position:absolute;
     border: 4px dashed white;
-    top:0;
-    left:0;
-    width:95%;
-    height:95%;
+    top:calc(7.5% - 4px);
+    left:calc(7.5% - 4px);
+    width:85%;
+    height:85%;
 }
 
 // winning message

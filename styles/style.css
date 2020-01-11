@@ -321,10 +321,10 @@ img {
   display: block;
   position: absolute;
   border: 4px dashed red;
-  top: 0;
-  left: 0;
-  width: 95%;
-  height: 95%;
+  top: calc(7.5% - 4px);
+  left: calc(7.5% - 4px);
+  width: 85%;
+  height: 85%;
 }
 
 .active {
@@ -339,10 +339,10 @@ img {
           box-shadow: inset 0 0 10px black;
   position: absolute;
   border: 4px dashed white;
-  top: 0;
-  left: 0;
-  width: 95%;
-  height: 95%;
+  top: calc(7.5% - 4px);
+  left: calc(7.5% - 4px);
+  width: 85%;
+  height: 85%;
 }
 
 div.win {
