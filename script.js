@@ -417,47 +417,29 @@ $('button.design').on('click', function(e) {
 // randomly choose a puzzle image array and post image credit to html
 
 puzzle.designPicker = function () {
-    i = Math.floor(Math.random() * 3 + 1);
-    console.log(i);
-    if (i === 1) {
-        if (puzzle.design !== "leaves") {
-            puzzle.randomArray = puzzle.leaves.slice(0);
-            $('.credit').html(puzzle.leaves[0].credit);
-            puzzle.design = "leaves";
-            puzzle.reset();
-            console.log(puzzle.design);
-        }
-        else {
-            console.log('oops');
-            return i = 2;
-        }
+
+    if (puzzle.design === "" || puzzle.design === "tiles") {
+        puzzle.randomArray = puzzle.leaves.slice(0);
+        $('.credit').html(puzzle.leaves[0].credit);
+        puzzle.design = "leaves";
+        puzzle.reset();
+        console.log(puzzle.design);
     }
-    else if (i === 2) {
-        if (puzzle.design !== "ocean") {
-            puzzle.randomArray = puzzle.ocean.slice(0);
-            $('.credit').html(puzzle.ocean[0].credit);
-            puzzle.design = "ocean";
-            puzzle.reset();
-            console.log(puzzle.design);
-        }
-        else {
-            console.log('oops');
-            return i = 3;
-        }
+
+    else if (puzzle.design === "leaves") {
+        puzzle.randomArray = puzzle.ocean.slice(0);
+        $('.credit').html(puzzle.ocean[0].credit);
+        puzzle.design = "ocean";
+        puzzle.reset();
+        console.log(puzzle.design);
     }
-    else {
-        if (puzzle.design !== "tiles") {
-            puzzle.randomArray = puzzle.tiles.slice(0);
-            $('.credit').html(puzzle.tiles[0].credit);
-            puzzle.design = "tiles";
-            puzzle.reset();
-            console.log(puzzle.design);
-        }
-        else {
-            console.log('oops');
-        }
+    else if (puzzle.design === "ocean") {
+        puzzle.randomArray = puzzle.tiles.slice(0);
+        $('.credit').html(puzzle.tiles[0].credit);
+        puzzle.design = "tiles";
+        puzzle.reset();
+        console.log(puzzle.design);
     }
-    console.log(puzzle.design);
 }
 
 // initialize everything
