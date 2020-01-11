@@ -423,7 +423,6 @@ puzzle.designPicker = function () {
         $('.credit').html(puzzle.leaves[0].credit);
         puzzle.design = "leaves";
         puzzle.reset();
-        console.log(puzzle.design);
     }
 
     else if (puzzle.design === "leaves") {
@@ -431,14 +430,12 @@ puzzle.designPicker = function () {
         $('.credit').html(puzzle.ocean[0].credit);
         puzzle.design = "ocean";
         puzzle.reset();
-        console.log(puzzle.design);
     }
     else if (puzzle.design === "ocean") {
         puzzle.randomArray = puzzle.tiles.slice(0);
         $('.credit').html(puzzle.tiles[0].credit);
         puzzle.design = "tiles";
         puzzle.reset();
-        console.log(puzzle.design);
     }
 }
 
