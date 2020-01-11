@@ -305,6 +305,8 @@ puzzle.tiles = [ // beginning of tiles puzzle images
     }
 ]; // end of tiles puzzle images
 
+//current puzzle design
+puzzle.design = ""
 
 //function to randomize the array order
 //this creates a copy of the original array, but in random order
@@ -391,7 +393,6 @@ puzzle.selectPiece = function () {
 //reset button
 
 puzzle.reset = function () {
-    puzzle.designPicker();
     puzzle.randomizer(puzzle.randomArray);
     puzzle.placeImages(puzzle.randomArray);
     puzzle.score = 0;
@@ -400,9 +401,16 @@ puzzle.reset = function () {
     }
 }
 
-$('button.reset').on('click', function (e) {
+$('button.reset').on('click', function(e) {
     e.preventDefault();
     puzzle.reset();
+})
+
+//change design button
+
+$('button.design').on('click', function(e) {
+    e.preventDefault();
+    puzzle.designPicker();
 })
 
 
@@ -410,18 +418,46 @@ $('button.reset').on('click', function (e) {
 
 puzzle.designPicker = function () {
     i = Math.floor(Math.random() * 3 + 1);
+    console.log(i);
     if (i === 1) {
-        puzzle.randomArray = puzzle.leaves.slice(0);
-        $('.credit').html(puzzle.leaves[0].credit);
+        if (puzzle.design !== "leaves") {
+            puzzle.randomArray = puzzle.leaves.slice(0);
+            $('.credit').html(puzzle.leaves[0].credit);
+            puzzle.design = "leaves";
+            puzzle.reset();
+            console.log(puzzle.design);
+        }
+        else {
+            console.log('oops');
+            return i = 2;
+        }
     }
     else if (i === 2) {
-        puzzle.randomArray = puzzle.ocean.slice(0);
-        $('.credit').html(puzzle.ocean[0].credit);
+        if (puzzle.design !== "ocean") {
+            puzzle.randomArray = puzzle.ocean.slice(0);
+            $('.credit').html(puzzle.ocean[0].credit);
+            puzzle.design = "ocean";
+            puzzle.reset();
+            console.log(puzzle.design);
+        }
+        else {
+            console.log('oops');
+            return i = 3;
+        }
     }
     else {
-        puzzle.randomArray = puzzle.tiles.slice(0);
-        $('.credit').html(puzzle.tiles[0].credit);
+        if (puzzle.design !== "tiles") {
+            puzzle.randomArray = puzzle.tiles.slice(0);
+            $('.credit').html(puzzle.tiles[0].credit);
+            puzzle.design = "tiles";
+            puzzle.reset();
+            console.log(puzzle.design);
+        }
+        else {
+            console.log('oops');
+        }
     }
+    console.log(puzzle.design);
 }
 
 // initialize everything

@@ -111,9 +111,10 @@ h2.win {
         }
 }
 
-//reset button
+//reset and change design buttons
 
-button.reset {
+button.reset,
+button.design {
     display: block;
     font-family: $secondaryFont;
     padding: 10px 20px;
@@ -126,7 +127,9 @@ button.reset {
 }
 
 button.reset:hover,
-button.reset:focus {
+button.reset:focus,
+button.design:hover,
+button.design:focus {
     border-right: transparent;
     border-bottom: transparent;
     border: 0.5px dashed grey;
